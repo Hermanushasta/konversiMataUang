@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Money Convertion</string>
+    <string name="money_convertion_intro">Money Convertion adalah sebuah aplikasi konversi mata uang dari Rupiah ke berbagai mata uang negara lain</string>
+    <string name="berat_badan">Berat badan (kg)</string>
+    <string name="tinggi_badan">Tinggi badan (cm)</string>
+    <string name="jenis_kelamin">Jenis kelamin</string>
+    <string name="pria">Pria</string>
+    <string name="wanita">Wanita</string>
+    <string name="hitung">Hitung</string>
+</resources>
