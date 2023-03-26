@@ -32,7 +32,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/beratBadan_inp"
+                android:id="@+id/masukanIDR_inp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/berat_badan" />
@@ -45,25 +45,8 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintTop_toBottomOf="@+id/beratBadan_hint">
+            app:layout_constraintTop_toBottomOf="@+id/beratBadan_hint"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/tinggiBadan_inp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/tinggi_badan" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-
-        <TextView
-            android:id="@+id/textViewJK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:text="@string/jenis_kelamin"
-            app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/radioGroup" />
 
         <RadioGroup
             android:id="@+id/radioGroup"
@@ -73,31 +56,16 @@
             android:layout_marginEnd="16dp"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/textViewJK"
-            app:layout_constraintTop_toBottomOf="@id/tinggiBadan_hint">
-
-            <RadioButton
-                android:id="@+id/priaRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/pria" />
-
-            <RadioButton
-                android:id="@+id/wanitaRadioButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/wanita" />
-        </RadioGroup>
+            app:layout_constraintTop_toBottomOf="@id/tinggiBadan_hint"/>
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="28dp"
             android:text="@string/hitung"
-            app:layout_constraintStart_toStartOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
         <View
@@ -122,17 +90,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/divider"
             tools:text="BMI: 24,09" />
-
-        <TextView
-            android:id="@+id/kategoriTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/bmiTextView"
-            tools:text="Kategori: Ideal" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
