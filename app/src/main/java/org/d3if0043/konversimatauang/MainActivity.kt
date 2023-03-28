@@ -30,19 +30,24 @@ class MainActivity : AppCompatActivity() {
         val isIDR = selectRadioButton == R.id.idrToUsdRadioButton
         val kursUSD = 15166.0f
 
-        val nominalKonversi =getNominal(isIDR, nominal.toFloat(), kursUSD )
+        var nominalKonversi = getNominal(isIDR, nominal.toFloat(), kursUSD )
+//        nominalKonversi = getString(R.string.usd_x, nominalKonversi)
+
         binding.hasilTextView.text = nominalKonversi
 
     }
     private fun getNominal(isIDR: Boolean, nominal:Float, kursUSD:Float): String {
+        var hasil = 0f
+        var nominalKonversi = ""
 
-        val hasil : Float =
         if (isIDR) {
-            nominal / kursUSD
+            hasil = nominal / kursUSD
+            nominalKonversi = getString(R.string.usd_x, hasil.toString())
         } else {
-            nominal * kursUSD
+            hasil = nominal * kursUSD
+            nominalKonversi = getString(R.string.rp_x, hasil.toString())
         }
-        return hasil.toString()
+        return nominalKonversi
     }
 
 }

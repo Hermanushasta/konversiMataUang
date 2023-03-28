@@ -76,14 +76,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/idrToUsd" />
+                android:text="@string/idrToUsd"
+                android:buttonTint="@color/purple_200"/>
 
             <RadioButton
                 android:id="@+id/usdToIdrRadioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/usdToIdr" />
+                android:text="@string/usdToIdr"
+                android:buttonTint="@color/purple_200"/>
         </RadioGroup>
 
         <Button
