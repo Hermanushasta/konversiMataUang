@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Money Convertion</string>
     <string name="money_convertion_intro">Money Convertion adalah sebuah aplikasi konversi mata uang dari Rupiah ke berbagai mata uang negara lain</string>
-    <string name="kolom_input_nominal">masukkan jumlah (IDR)</string>
+    <string name="kolom_input_nominal">Masukkan Jumlah (IDR)</string>
     <string name="hitung">Hitung</string>
     <string name="hasil_konvert">$ %1$.2f</string>
     <string name="nominal_invalid">Kolom tidak boleh kosong</string>
