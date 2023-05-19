@@ -15,4 +15,8 @@
     <string name="copyright">Hak Cipta dalam aplikasi konversi mata uang ini dan segala kontennya, termasuk tetapi tidak terbatas pada desain, grafis, ikon, logo, teks, gambar, audio, video, dan perangkat lunak terkait
         Money Convertion, dimiliki oleh Hermanus Hasta Wicaksana. \nDengan menggunakan Aplikasi ini, Anda dianggap telah membaca, memahami, dan menyetujui semua syarat dan ketentuan yang tercantum di atas.
         Jika Anda tidak setuju dengan syarat dan ketentuan ini, harap menghentikan penggunaan Aplikasi ini.\nCopyright ©2023 All Rights Reserved.</string>
+    <string name="hapus_histori">Hapus Histori</string>
+    <string name="tentang_aplikasi">Tentang Aplikasi</string>
+    <string name="histori">Histori</string>
+
 </resources>

@@ -1,6 +1,5 @@
-package org.d3if0043.konversimatauang.ui
+package org.d3if0043.konversimatauang.ui.hitung
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
