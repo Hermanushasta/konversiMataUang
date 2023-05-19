@@ -11,4 +11,5 @@
     <string name="radioInvalid">Pilih kurs terlebih dahulu</string>
     <string name="usd_x">$ %1$s</string>
     <string name="rp_x">Rp %1$s</string>
+    <string name="pilihanKonversi">IDR ke USD</string>
 </resources>
