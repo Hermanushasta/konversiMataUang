@@ -1,30 +1,48 @@
-package org.d3if0043.konversimatauang
+package org.d3if0043.konversimatauang.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
-import org.d3if0043.konversimatauang.databinding.ActivityMainBinding
+import androidx.fragment.app.Fragment
+import org.d3if0043.konversimatauang.R
+import org.d3if0043.konversimatauang.databinding.FragmentConvertionBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class ConvertionFragment : Fragment() {
+    private lateinit var binding: FragmentConvertionBinding
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        binding = ActivityMainBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
+//        binding.button.setOnClickListener { konvertMataUang() }
+//    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = FragmentConvertionBinding.inflate(layoutInflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.button.setOnClickListener { konvertMataUang() }
     }
 
     private fun konvertMataUang() {
         val nominal = binding.masukanIDRInp.text.toString()
         if (TextUtils.isEmpty(nominal)) {
-            Toast.makeText(this, R.string.nominal_invalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.nominal_invalid, Toast.LENGTH_LONG).show()
             return
         }
         val selectRadioButton = binding.radioGroup.checkedRadioButtonId
         if (selectRadioButton == -1) {
-            Toast.makeText(this, R.string.radioInvalid, Toast.LENGTH_LONG).show()
+            Toast.makeText(context, R.string.radioInvalid, Toast.LENGTH_LONG).show()
             return
         }
         val isIDR = selectRadioButton == R.id.idrToUsdRadioButton
