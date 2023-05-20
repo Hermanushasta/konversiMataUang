@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Money Convertion</string>
     <string name="money_convertion_intro">Money Convertion adalah sebuah aplikasi konversi mata uang dari Rupiah ke USD (Unites States Dollar)</string>
-    <string name="kolom_input_nominal">Masukkan Jumlah (IDR)</string>
+    <string name="kolom_input_nominal">Masukkan Jumlah (IDR / USD)</string>
     <string name="hitung">Hitung</string>
     <string name="hasil_konvert">$ %1$.2f</string>
     <string name="nominal_invalid">Kolom tidak boleh kosong</string>
@@ -18,5 +18,13 @@
     <string name="hapus_histori">Hapus Histori</string>
     <string name="tentang_aplikasi">Tentang Aplikasi</string>
     <string name="histori">Histori</string>
+    <string name="konversi_textView">Konversikan IDR ke USD maupun Sebaliknya</string>
+    <string name="idr_main">IDR</string>
+    <string name="usd_main">USD</string>
+    <string name="hapus">Hapus</string>
+    <string name="konfirmasi_hapus">Hapus semua histori?</string>
+    <string name="batal">Batal</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

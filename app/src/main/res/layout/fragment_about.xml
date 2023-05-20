@@ -4,6 +4,6 @@
     android:layout_height="match_parent"
     android:layout_margin="16dp"
     android:text="@string/copyright"
-    android:textSize="18dp">
+    android:textSize="18sp">
 
 </TextView>
