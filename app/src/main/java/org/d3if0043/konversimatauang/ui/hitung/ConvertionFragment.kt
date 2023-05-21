@@ -26,6 +26,7 @@ class ConvertionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentConvertionBinding.inflate(layoutInflater, container, false)
+        setHasOptionsMenu(true)
         return binding.root
     }
 

@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import org.d3if0043.konversimatauang.R
 import org.d3if0043.konversimatauang.databinding.ItemHistoriBinding
 import org.d3if0043.konversimatauang.db.ConvertionEntity
 import org.d3if0043.konversimatauang.model.getNominal
@@ -49,11 +50,24 @@ class HistoriAdapter :
         private val binding: ItemHistoriBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        private val dateFormatter = SimpleDateFormat("dd MMMM yyyy", Locale("id", "ID"))
+        private val dateFormatter = SimpleDateFormat("dd MMMM yyyy",
+            Locale("id", "ID"))
 
         fun bind(item: ConvertionEntity) = with(binding) {
             val hasilKonversi = item.getNominal()
+            tanggalTextView.text =dateFormatter.format(Date(item.tanggal))
+
+            hasilTextView.text=root.context.getString(
+                R.string.hasil_konvert,
+                hasilKonversi.hasil
+            )
+
+            jumlahTextView.text=item.nominal.toString()
+            val jenisKonversi = root.context.getString(
+                if (item.isIDR) R.string.jenisKonversiUSDToIDR else R.string.jenisKonversiIdrToUSD
+            )
+
+
         }
     }
-
 }

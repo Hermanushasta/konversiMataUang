@@ -16,15 +16,22 @@
         <action
             android:id="@+id/action_mainFragment_to_convertionFragment"
             app:destination="@id/convertionFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_historiFragment"
+            app:destination="@id/historiFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="org.d3if0043.konversimatauang.AboutFragment"
+        android:name="org.d3if0043.konversimatauang.ui.about.AboutFragment"
         android:label="About"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/convertionFragment"
         android:name="org.d3if0043.konversimatauang.ui.hitung.ConvertionFragment"
-        android:label="ConvertionFragment" />
+        android:label="Money Convertion" />
+    <fragment
+        android:id="@+id/historiFragment"
+        android:name="org.d3if0043.konversimatauang.ui.histori.HistoriFragment"
+        android:label="Histori" />
 
 </navigation>

@@ -10,10 +10,8 @@ fun ConvertionEntity.getNominal(): HasilKonversi {
 
     if (isIDR) {
         hasil = nominal / kursUSD
-//        nominalKonversi = getString(R.string.usd_x, hasil.toString())
     } else {
         hasil = nominal * kursUSD
-//        nominalKonversi = getString(R.string.rp_x, hasil.toString())
     }
     return HasilKonversi(hasil)
 }

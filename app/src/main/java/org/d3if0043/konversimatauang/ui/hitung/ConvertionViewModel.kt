@@ -14,6 +14,7 @@ import org.d3if0043.konversimatauang.model.getNominal
 class ConvertionViewModel (private val db:ConvertionDao) : ViewModel(){
     private val hasilKonversi = MutableLiveData<HasilKonversi>()
 
+    val data = db.getLastConvertion()
     fun hitungKonversi (isIDR: Boolean, nominal: Float) {
         val dataKonversi = ConvertionEntity(
             nominal = nominal,

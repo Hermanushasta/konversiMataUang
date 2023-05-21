@@ -11,7 +11,7 @@ interface ConvertionDao {
     @Insert
     fun insert(convertion: ConvertionEntity)
 
-    @Query("SELECT * FROM convertion ORDER BY id DESC LIMIT 1")
+    @Query("SELECT * FROM convertion ORDER BY id DESC")
     fun getLastConvertion(): LiveData<List<ConvertionEntity>>
 
     @Query("DELETE FROM convertion")
