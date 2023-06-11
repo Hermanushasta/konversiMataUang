@@ -29,5 +29,6 @@
     <string name="jenisKonversiIdrToUSD">IDR > USD</string>
     <string name="jenisKonversiUSDToIDR">USD > IDR</string>
     <string name="cekMedSos">Lihat sosial media kami di bawah ini </string>
+    <string name="koneksi_error">Coba cek koneksi internet kamu xixi...</string>
 
 </resources>
