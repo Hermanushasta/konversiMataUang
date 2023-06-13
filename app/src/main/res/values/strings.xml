@@ -31,4 +31,10 @@
     <string name="cekMedSos">Lihat sosial media kami di bawah ini </string>
     <string name="koneksi_error">Coba cek koneksi internet kamu xixi...</string>
 
+    <string name="channel_name">Updater</string>
+    <string name="channel_desc">Update data hewan otomatis</string>
+
+    <string name="notif_title">Konversikan sekarang yuk!</string>
+    <string name="notif_text">Cek sekarang biar nggak penasaran xixi...</string>
+
 </resources>

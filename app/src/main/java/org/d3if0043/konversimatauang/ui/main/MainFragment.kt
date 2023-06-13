@@ -1,12 +1,17 @@
 package org.d3if0043.konversimatauang.ui.main
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.view.*
+import androidx.annotation.RequiresApi
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import org.d3if0043.konversimatauang.MainActivity
 import org.d3if0043.konversimatauang.R
 import org.d3if0043.konversimatauang.databinding.FragmentMainBinding
 import org.d3if0043.konversimatauang.network.ApiStatus
@@ -48,6 +53,8 @@ class MainFragment : Fragment() {
         viewModel.getStatus().observe(viewLifecycleOwner) {
             updateProgress(it)
         }
+
+        viewModel.scheduleUpdater(requireActivity().application)
 
 
 
@@ -95,9 +102,9 @@ class MainFragment : Fragment() {
             ApiStatus.SUCCESS -> {
                 binding.progressBar.visibility = View.GONE
 
-//                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-//                    requestNotificationPermission()
-//                }
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    requestNotificationPermission()
+                }
             }
 
             ApiStatus.FAILED -> {
@@ -107,5 +114,19 @@ class MainFragment : Fragment() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
+    private fun requestNotificationPermission() {
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.POST_NOTIFICATIONS
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(Manifest.permission.POST_NOTIFICATIONS),
+                MainActivity.PERMISSION_REQUEST_CODE
+            )
+        }
+    }
 
 }
